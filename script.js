@@ -4,6 +4,8 @@ let xScore = 0
 let oScore = 0
 let tieScore = 0
 
+var counter = 1
+
 for (let i = 1; i <= 9; i++)
 {
     document.getElementById(i.toString()).addEventListener(
@@ -18,9 +20,11 @@ for (let i = 1; i <= 9; i++)
 
             if(playerSymbol === "X"){
                 playerSymbol = "O"
+                counter += 1
             }
             else{
                 playerSymbol = "X"
+                counter += 1
             }
         }
         }
@@ -59,21 +63,25 @@ function checkWin()
             {
                 alert("O wins!");
                 oScore += 1
+                counter = 1
                 document.getElementById("p2").innerHTML = oScore
             }
             if(playerSymbol === "O")
             {
                 alert("X wins!")
                 xScore += 1
+                counter = 1
                 document.getElementById("p1").innerHTML = xScore
             }
-            if (winPos = false)
-            {
-                alert("It's a tie!")
-                tieScore += 1
-                document.getElementById("ties").innerHTML = tieScore
-            }
         }, 500);
+        }
+        else if (counter == 9)
+        {
+            gameEnded = true;
+            alert("It's a tie!")
+            tieScore += 1
+            counter = 1
+            document.getElementById("ties").innerHTML = tieScore
         }
     }
 }
@@ -90,5 +98,27 @@ document.getElementById("reset").addEventListener(
             document.getElementById(i.toString()).classList.remove("win")
             gameEnded = false;
         }
+        counter = 1
+    }
+)
+
+document.getElementById("resetScore").addEventListener(
+    "click",
+    function()
+    {
+        for (let i = 1; i <= 9; i++){
+            document.getElementById(i.toString()).innerHTML = ""
+            document.getElementById(i.toString()).classList.remove("x")
+            document.getElementById(i.toString()).classList.remove("o")
+            document.getElementById(i.toString()).classList.remove("win")
+            gameEnded = false;
+        }
+        counter = 1
+        xScore = 0
+        oScore = 0
+        tieScore = 0
+        document.getElementById("p1").innerHTML = xScore
+        document.getElementById("p2").innerHTML = oScore
+        document.getElementById("ties").innerHTML = tieScore
     }
 )
