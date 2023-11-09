@@ -4,12 +4,14 @@
     padding: 0;
 
 }
-.container{
+.container
+{
     display: flex;
     flex-direction: column;    
 }
 
-#reset{
+#reset
+{
     margin: 48px 40%;
     padding: 20px;
     background-color: rgb(76, 120, 202);
@@ -20,11 +22,13 @@
     transition: all 0.2s ease;
 }
 
-#reset:hover{
+#reset:hover
+{
     background-color: rgb(169, 136, 200);
 }
 
-table{
+table
+{
     border-collapse: collapse;
     margin: 0 auto;
 }
@@ -44,10 +48,39 @@ td
     display: flex;
     justify-content: center;
     gap: 100px;
-    height: 200px;
+    height: 125px;
 }
 
 .title
 {
     margin: 30px;
+}
+
+.scores p
+{
+    text-align: center;
+}
+
+.player
+{
+    width: 100px;
+    text-align: center;
+}
+
+#resetScore
+{
+    margin: 48px 40%;
+    margin-top: 5px;
+    padding: 20px;
+    background-color: rgb(76, 120, 202);
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#resetScore:hover
+{
+    background-color: rgb(169, 136, 200);
 }
