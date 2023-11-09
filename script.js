@@ -31,9 +31,6 @@ let winPos = [
 ]
 
 
-
-
-
 function checkWin() {
     for (let i = 0; i < winPos.length; i++) {
       if (
@@ -52,6 +49,7 @@ function checkWin() {
     }
     }
 }
+
 
 document.getElementById("reset").addEventListener(
     "click",
