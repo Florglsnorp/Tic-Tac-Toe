@@ -10,7 +10,7 @@
     flex-direction: column;    
 }
 
-.reset
+#reset
 {
     margin: 48px 40%;
     padding: 20px;
@@ -22,7 +22,7 @@
     transition: all 0.2s ease;
 }
 
-.reset:hover
+#reset:hover
 {
     background-color: rgb(169, 136, 200);
 }
