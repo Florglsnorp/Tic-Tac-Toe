@@ -44,7 +44,10 @@ function checkWin() {
         gameEnded = true;
 
         setTimeout(function() {
-          alert(playerSymbol + " wins!");
+            if(playerSymbol === "X"){
+                alert("O wins!");}
+            if(playerSymbol === "O"){
+                alert("X wins!")}
         }, 500);
     }
     }
