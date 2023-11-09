@@ -77,7 +77,6 @@ function checkWin()
         }
         else if (counter == 9)
         {
-            gameEnded = true;
             alert("It's a tie!")
             tieScore += 1
             counter = 1
