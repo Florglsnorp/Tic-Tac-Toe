@@ -1,8 +1,9 @@
-*{
-    padding: 0;
+*
+{
     margin: 0;
-}
+    padding: 0;
 
+}
 .container{
     display: flex;
     flex-direction: column;    
@@ -23,15 +24,30 @@
     background-color: rgb(169, 136, 200);
 }
 
-table {
+table{
     border-collapse: collapse;
     margin: 0 auto;
 }
 
-td {
+td
+{
     width: 100px;
     height: 100px;
     text-align: center;
     vertical-align: middle;
     border: 1px solid black;
+}
+
+.scores
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    height: 200px;
+}
+
+.title
+{
+    margin: 30px;
 }
