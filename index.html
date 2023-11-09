@@ -19,9 +19,15 @@
     <div class="scores">
         <div class="player">
             <h3>Player 1</h3>
+            <p id="p1">0</p>
         </div>
         <div class="player">
             <h3>Player 2</h3>
+            <p id="p2">0</p>
+        </div>
+        <div class="player">
+            <h3>Ties</h3>
+            <p id="ties">0</p>
         </div>
     </div>
     
@@ -43,7 +49,8 @@
                 <td id="9"></td>
             </tr>
         </table>
-        <button id="reset">Reset</button>
+        <button class="reset">Reset</button>
+        <button class="reset" onclick="resetScore()">Reset Scores</button>
     </div>
 
     <script src="script.js"></script>

@@ -4,12 +4,14 @@ let xScore = 0
 let oScore = 0
 let tieScore = 0
 
-
-for (let i = 1; i <= 9; i++){
+for (let i = 1; i <= 9; i++)
+{
     document.getElementById(i.toString()).addEventListener(
         "click",
-        function(){
-        if (this.innerHTML === "" && !gameEnded){
+        function()
+        {
+        if (this.innerHTML === "" && !gameEnded)
+        {
             this.innerHTML = playerSymbol
             this.classList.add(playerSymbol.toLocaleLowerCase())
             checkWin()
@@ -26,7 +28,8 @@ for (let i = 1; i <= 9; i++){
 }
 
 
-let winPos = [
+let winPos = 
+[
     [1, 2, 3], [4, 5, 6],
     [7, 8, 9], [1, 4, 7],
     [2, 5, 8], [3, 6, 9],
@@ -34,47 +37,58 @@ let winPos = [
 ]
 
 
-function checkWin() {
-    for (let i = 0; i < winPos.length; i++) {
-      if (
+function checkWin()
+{
+    for (let i = 0; i < winPos.length; i++)
+    {
+      if
+      (
         document.getElementById(winPos[i][0]).innerHTML === playerSymbol &&
         document.getElementById(winPos[i][1]).innerHTML === playerSymbol &&
         document.getElementById(winPos[i][2]).innerHTML === playerSymbol
-        ){
+        )
+        {
         document.getElementById(winPos[i][0]).classList.add("win");
         document.getElementById(winPos[i][1]).classList.add("win");
         document.getElementById(winPos[i][2]).classList.add("win"); 
         gameEnded = true;
 
-        setTimeout(function() {
-            if (winPos = true){
-                if(playerSymbol === "X"){
-                    alert("O wins!");}
-                    oScore += 1
-                if(playerSymbol === "O"){
-                    alert("X wins!")}
-                    xScore += 1
+        setTimeout(function()
+        {
+            if(playerSymbol === "X")
+            {
+                alert("O wins!");
+                oScore += 1
+                document.getElementById("p2").innerHTML = oScore
             }
-            if (winPos = false){
+            if(playerSymbol === "O")
+            {
+                alert("X wins!")
+                xScore += 1
+                document.getElementById("p1").innerHTML = xScore
+            }
+            if (winPos = false)
+            {
                 alert("It's a tie!")
                 tieScore += 1
+                document.getElementById("ties").innerHTML = tieScore
             }
         }, 500);
-    }
+        }
     }
 }
 
 
 document.getElementById("reset").addEventListener(
     "click",
-    function(){
+    function()
+    {
         for (let i = 1; i <= 9; i++){
             document.getElementById(i.toString()).innerHTML = ""
             document.getElementById(i.toString()).classList.remove("x")
             document.getElementById(i.toString()).classList.remove("o")
             document.getElementById(i.toString()).classList.remove("win")
             gameEnded = false;
-
         }
     }
 )
