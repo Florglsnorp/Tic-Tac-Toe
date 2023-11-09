@@ -31,9 +31,6 @@ let winPos = [
 ]
 
 
-
-
-
 function checkWin() {
     for (let i = 0; i < winPos.length; i++) {
       if (
@@ -47,11 +44,15 @@ function checkWin() {
         gameEnded = true;
 
         setTimeout(function() {
-          alert(playerSymbol + " wins!");
+            if(playerSymbol === "X"){
+                alert("O wins!");}
+            if(playerSymbol === "O"){
+                alert("X wins!")}
         }, 500);
     }
     }
 }
+
 
 document.getElementById("reset").addEventListener(
     "click",
