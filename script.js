@@ -2,6 +2,7 @@ let playerSymbol = "X"
 let gameEnded = false
 let xScore = 0
 let oScore = 0
+let tieScore = 0
 
 for (let i = 1; i <= 9; i++)
 {
@@ -65,6 +66,12 @@ function checkWin()
                 alert("X wins!")
                 xScore += 1
                 document.getElementById("p1").innerHTML = xScore
+            }
+            if (winPos = false)
+            {
+                alert("It's a tie!")
+                tieScore += 1
+                document.getElementById("ties").innerHTML = tieScore
             }
         }, 500);
         }
