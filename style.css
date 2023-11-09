@@ -4,7 +4,8 @@
     padding: 0;
 
 }
-.container{
+.container
+{
     display: flex;
     flex-direction: column;    
 }
@@ -13,8 +14,9 @@ body{
     background: #8dbedf;
 }
 
-#reset{
-    margin: 40px 40%;
+#reset
+{
+    margin: 48px 40%;
     padding: 20px;
     background-color: rgb(74, 106, 164);
     color: white;
@@ -26,11 +28,13 @@ body{
 
 }
 
-#reset:hover{
+#reset:hover
+{
     background-color: rgb(169, 136, 200);
 }
 
-table{
+table
+{
     border-collapse: collapse;
     margin: 0 auto;
     background-color: white;
@@ -52,14 +56,40 @@ td
     display: flex;
     justify-content: center;
     gap: 100px;
-    height: 80px;
+    height: 125px;
 }
 
 .title
 {
     padding: 15;
     margin: 30px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: 300;
-    font-size: 1.50rem;
+}
+
+.scores p
+{
+    text-align: center;
+}
+
+.player
+{
+    width: 100px;
+    text-align: center;
+}
+
+#resetScore
+{
+    margin: 48px 40%;
+    margin-top: 5px;
+    padding: 20px;
+    background-color: rgb(76, 120, 202);
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#resetScore:hover
+{
+    background-color: rgb(169, 136, 200);
 }
